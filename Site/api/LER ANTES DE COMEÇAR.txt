@@ -1,0 +1,35 @@
+
+
+ANTES DE USAR:
+
+1) Faça o comando no console/terminal: npm i
+
+2) Faça a instalação do nodemon (Melhor para não ficar reiniando o servidor manualmente)
+    COMANDO: npm install nodemon -g
+
+3) Verifique as credenciais do banco de dados do azure na pasta
+   src > database > config.js
+
+4) Digite o seguinte comando no terminal: npm start
+    
+    Se aparecer no console: Database Connected!
+    o banco de dados está funcionando
+
+5) No arquivo routes.js Verifique se os campos/nome das tabelas estão da 
+mesma forma que você criou lá no azure.
+
+6) Coloque todos os arquivos do seu projeto na pasta public
+
+7) Verifique se o seu arquivo do projeto é o index.html, caso não seja coloque como: index.html
+
+8) Acesse seu navegador e coloque a seguinte URL: http://localhost:3333/ e veja se aparece o arquivo index.html do 
+seu projeto
+
+9) Para fazer o cadastro e login verifique o arquivo de exemplo dentro da pasta public > exemplo.txt
+
+10) Sempre teste e verifique se inseriu lá no azure 
+
+-- Lembre-se sempre verifique o terminal para possiveis erros!
+
+Pronto qualquer dúvida pode me chamar no whatsapp 96711-4590 ou no email: gabriel.pereira@bandtec.com.br
+

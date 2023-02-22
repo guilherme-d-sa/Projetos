@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="Css/stylelogincadastro.css">
+    <script src="https://kit.fontawesome.com/b30017ee28.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body  class="body">
+
+  <header>
+    <div class="botaov"> <a class="voltar" href="index.html"> <div class="content-img"></div> </div></a>
+  </header>
+ <div class="container">
+  
+ 
+   
+     <!-- primeiro CONTEUDO -->
+  <div class="content first-content">
+      <div class="primeira-coluna">
+          <h2 class="titulo titulo1">O sino tocou novamente... </h2>
+          <p class="descrição descrição1">As Cinzas se levantaram...</p>
+           <p class="descrição descrição1">Se Torne um Lorde das Cinzas</p>
+           <button id="acenda" class="btn btn-esquerda">Acenda a Chama</button>
+
+      </div>
+<!--  começo da segunda coluna -->
+      <div class="segunda-coluna">
+          <h2 class="titulo titulo2">Crie uma Conta</h2>
+          <div class="midias">
+              <ul class="lista">
+
+                    <a href="#" class="link-icone">
+                      <li class="itens-midia"><i class="fab fa-facebook"></i></li>
+                    </a>
+
+                    <a href="#" class="link-icone">
+                  <li class="itens-midia"><i class="fab fa-google-plus-g"></i></li>
+                    </a>
+
+                    <a href="#" class="link-icone">
+                  <li class="itens-midia"><i class="fab fa-linkedin-in"></i></li>
+                    </a>
+              </ul>
+          </div>
+          <p class="descrição descrição2">Ou utilize seu email</p>
+          <form class="form">
+
+            <label for="" class="label-input">
+                    <i class="fas fa-user icone-modify"></i>
+              <input id="id_nome" type="text" placeholder="Nome">
+            </label>
+        
+            <label for="" class="label-input">
+                    <i class="fas fa-envelope icone-modify"></i>
+              <input id="id_email" type="email" placeholder="Email">
+            </label>
+
+            <label for="" class="label-input icone-modify">
+                    <i class="fas fa-lock icone-modify"></i>
+              <input id="id_senha" type="password" placeholder="Senha">
+            </label>
+
+              <button  onclick="criaruser()" class="btn btn-direita">Criar</button>
+          </form>
+
+      </div> 
+      <!--  FIM DO Primeiro CONTEDUO -->
+
+
+   </div>
+<!-- COMEÇO DO Segundo CONTEUDO TRANSIÇÂO -->
+     <div class="content second-content">
+            <div class="primeira-coluna">
+                    <h2 class="titulo titulo1">Bem-Vindo de volta Cinério</h2>
+                    <p class="descrição descrição1">Entre na sua conta novamente</p>
+                     <p class="descrição descrição1">Ou comece sua jornada para se torna um Lorde das Cinzas</p>
+                     <p class="descrição descrição1">Utilizando a fogueira...</p>
+                     <button  id="fogueira" class="btn btn-esquerda">Fogueira</button>
+           </div>
+
+           <!-- começo da segunda coluna -->
+            <div class="segunda-coluna">
+                    <h2 class="titulo titulo2">Entre na sua conta</h2>
+                    <div class="midias">
+                            <ul class="lista">
+              
+                                  <a href="#" class="link-icone">
+                                    <li class="itens-midia"><i class="fab fa-facebook"></i></li>
+                                  </a>
+              
+                                  <a href="#" class="link-icone">
+                                <li class="itens-midia"><i class="fab fa-google-plus-g"></i></li>
+                                  </a>
+              
+                                  <a href="#" class="link-icone">
+                                <li class="itens-midia"><i class="fab fa-linkedin-in"></i></li>
+                                  </a>
+                            </ul>
+                        </div>
+                    <p class="descrição descrição2">Ou utilize seu email</p>
+                    <form class="form">
+
+                            <label for="" class="label-input">
+                                    <i class="fas fa-envelope icone-modify"></i>
+                              <input id="login_email"  type="email" placeholder="Email">
+                            </label>
+                
+                            <label for="" class="label-input icone-modify">
+                                    <i class="fas fa-lock icone-modify"></i>
+                              <input id="login_senha" type="password" placeholder="Senha">
+                            </label>
+
+                            <a class="hollow" href="#">Já está se tornando Hollow ?</a>
+                
+                              <button type="button" onclick="loginuser()" class="btn btn-direita">Entrar</button>
+                          </form>
+                
+          
+                </div>
+       
+       </div>
+       <!-- FIM DO SEGUNDO CONTEUDO -->
+
+       
+
+
+
+
+
+
+
+
+
+       
+ </div>
+
+
+    <script src="js/animationlogin.js"></script>
+    
+</body>
+</html>
+
+<script>
+function criaruser(){
+
+  // url padrão da api 
+// SEMPRE UTILIZE A VARIÁVEL URL!
+let url = 'http://localhost:3333';
+
+// Exemplo para o cadastro do usuário
+fetch(url + '/user', {
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    },
+    method: "POST",
+    body: JSON.stringify({ 
+        name: id_nome.value,
+        email: id_email.value, 
+        password: id_senha.value
+        })
+    
+}).then(resposta => {
+    if(resposta.ok) {
+        resposta.json().then(json => {
+            console.log(json.message)
+            // Caso o usuario foi criado com sucesso
+            if(json.message == "Usuário criado com sucesso!") {
+
+                // Tempo de espera para redirecionar para outra página
+                // após o cadastro
+                setTimeout(() => {
+                    window.location.href = 'login.html'
+                }, 1200);
+            }
+            // Caso o usuario já exista
+            if(json.message == "Esse usuário já existe!") {
+               
+            }
+        });
+    }
+});
+    
+
+
+}
+
+function loginuser(){
+// url padrão da api 
+// SEMPRE UTILIZE A VARIÁVEL URL!
+let url = 'http://localhost:3333';
+
+
+
+// Exemplo para o login do usuário
+
+fetch(url + '/login', {
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    },
+    method: "POST",
+    body: JSON.stringify({ 
+        email: login_email.value, 
+        senha: login_senha.value
+    })
+    
+}).then(resposta => {
+    if(resposta.ok) {
+        resposta.json().then(json => {
+            console.log(json.message)
+            // Se o login estiver certo
+            if(json.message == "Login feito com sucesso!") {
+              setTimeout(() => {
+                    window.location.href = 'index.html'
+                }, 1200);
+            
+            } if(json.message == "Opps.. Usuário ou Senha inválidos!") {
+               
+            }
+        });
+    }
+});
+}
+</script>

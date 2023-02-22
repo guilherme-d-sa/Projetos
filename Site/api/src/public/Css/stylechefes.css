@@ -1,0 +1,708 @@
+@font-face {
+    font-family: 'ds-normal';
+    src: url(../Fontes/optimusprinceps-webfont.woff2) format('woff2'),
+         url(../Fontes/optimusprinceps-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'ds-bold';
+    src: url(../Fontes/optimusprincepssemibold-webfont.woff2) format('woff2'),
+         url(../Fontes/optimusprincepssemibold-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+
+
+header{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 13;
+}
+
+/* menu */
+.menu{
+    width: 84%;
+    height: 50px;
+    background-color: transparent;
+    font-family: 'ds-bold';
+    text-shadow: -2px 1px 5px #ce310d;
+    position: absolute;
+    left: 6%;
+
+    
+}
+
+
+.menu ul {
+list-style: none;
+position: relative;
+
+}
+.menu ul li{
+    width: 224px;
+    float: left;
+    
+    
+}
+.menu a{
+    padding: 15px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    background-color:transparent;
+    color:#fff;
+    border-bottom: white 1px solid;
+    margin-left: 5%;
+}
+.menu ul ul {
+    position: absolute;
+    visibility: hidden;
+    
+}
+.menu ul :hover ul{
+    visibility: visible;
+}
+.menu a:hover{
+    background-color:#f4f4f4;
+    color:#555;
+    transition: .7s;
+}
+.menu ul ul li{
+    float: none;
+    /* border-bottom: solid 1px #ccc; */
+    
+}
+.menu ul ul li a{
+    background-color: black;
+    
+}
+
+/* Menu responsivo */
+ label[for="bt_menu"]{
+     padding: 5px;
+     background-color: #222;
+     color: #fff;
+     font-family: Arial, Helvetica, sans-serif;
+     text-align: center;
+     font-size: 30px;
+     cursor: pointer;
+     width: 50px;
+     height: 50px;
+ }
+  /* deixando a check box invisilve */
+  #bt_menu{
+      display: none;
+  }
+  /* botão invisivel na tela grande */
+
+  label[for="bt_menu"]{
+      display: none;
+  }
+
+ /* Visual da pagina pequena */
+
+@media(max-width:800px){
+    header{
+        background-color: none;
+    }
+
+    label[for="bt_menu"]{
+        display: block;
+    }
+
+    #bt_menu:checked ~ .menu{
+        margin-left: 0;
+    }
+
+    .menu{
+        margin-left: -100%;
+        transition: all .4s;
+        position: absolute;
+        left: 0%;
+    }
+
+    .menu ul li{
+        width: 100%;
+        float: none;
+        position: relative;
+        left: 0%;
+    }
+    .menu ul ul{
+        position: relative;
+        overflow: hidden;
+        max-height: 0;
+        transition: all .4s;
+        left: 0%;
+    }
+    .menu ul li:hover ul{
+        height: auto;
+        max-height: 200px;
+    }
+    
+}
+/* Configurando os sections */
+/* Sections da home */
+.bloco{
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+}
+#oqe{
+    background-color: #080818;
+    background-image: url(../Imagens/Home/oqe.png);
+    z-index: 0;
+}
+#universo{
+    background-color: darkorchid;
+    background-image: url(../Imagens/Home/universo.jpg);
+    z-index: 0;
+}
+#lore{
+    background-color: #382C30;
+}
+#lore2{
+    background-color: #382C30;
+}
+
+/* Sections do mapa*/
+#inicio{
+    background-color: aqua;
+}
+
+/* Selections chefes */
+#inicio_chefes{
+    background-image: url(../Imagens/Chefes/INICIO/iniciochefes.jpg);
+    background-size: cover;
+}
+
+/* Selections Itens */
+#inicio_itens{
+    background-color: forestgreen;
+}
+
+.intro{
+    width: 792px;
+    height: 500px;
+    border: transparent 1px solid;
+    margin: 0% 1% 1% 21%;
+    box-shadow: 0px 6px 18px 0px #191515;
+   
+}
+.intro p{
+    background-color: #0000009e;
+    color: white;
+    font-family: 'ds-normal';
+    font-size: 39px;
+    margin-top: 23%;
+    text-shadow: -2px 1px 5px #ce310d;
+    /* border-top: #ffffff21 7px solid; */
+    /* border-bottom: #ffffff21 7px solid; */
+    border-radius: 8px;
+}
+ 
+/* EDITANDO DIVS GERAIS*/
+.container-geral {
+    /* background-color: red;  */
+    /* border: #060606 1px solid; */
+    height: 84%;
+    margin: 20px;
+    width: 91%;
+    top: 3%;
+    position: relative;
+    box-shadow: -2px 5px 5px 5px;
+}
+
+
+  /* EDITANDO GUNDYR */
+  .titulos{
+    float: left;
+    font-size: 24px;
+    padding: 2%;
+    
+    width: 378px
+}
+.titulos h1{
+    color: white;
+    text-shadow: -2px 1px 5px #ce310d;
+    font-family: 'ds-bold';
+    font-size: 31px;
+}
+  
+
+  .conteudo1 {
+    background-color: #04040482;
+    margin: 47px;
+    width: 30%;
+    float: left;
+    border-top: #ffffff 9px solid;
+    border-bottom: #ffffff 9px solid;
+    text-align: center;
+    height: 87%;
+    border-radius: 7px;
+    position: relative;
+    left: 34%;
+    top: -45%;
+    box-shadow: 2px 0px 5px 6px #4c4443;
+  }
+  .conteudo1 p{
+    padding-top: 15%;
+    color: white;
+    font-size: 23px;
+    font-family: 'ds-normal';
+    text-shadow: -2px 1px 5px #ce310d;
+  }
+  .botao-voltar-ao-inicio{
+    position: relative;
+    top: 43%;
+    left: -26%;
+    /* border: #e6dede 1px solid; */
+    float: left;
+    height: 9%;
+    background-color: #000000;
+    border-radius: 4px;
+    box-shadow: 1px 4px 7px 5px black;
+      
+  }
+  .botao-voltar-ao-inicio h1{
+    padding-top: 8%;
+    color: white;
+    text-shadow: -2px 1px 5px #ce310d;
+    font-family: 'ds-bold';
+
+  }
+  .botao-voltar-ao-inicio a{
+      text-decoration: none;
+      padding-top: 2%;
+      
+  }
+  .botao-voltar-ao-inicio h1:hover{
+      color: black;
+      transition: .5s;
+  }
+  
+  .botao-voltar-ao-inicio:hover{
+      color: black;
+      background-color: #ffffff;
+      height: 11%;
+      transition: .5s
+  }
+
+  .imagem2{
+     
+    height: 217px;
+    margin: 10px;
+    width: 412px;
+    background-color: white;
+    box-shadow: -2px 5px 5px 5px black;
+    position: relative;
+    top: 19%;
+    float: left;
+    left: -30%;
+
+  }
+  .imagem3{
+    height: 217px;
+    margin: 10px;
+    width: 377px;
+    background-color: white;
+    box-shadow: -2px 5px 5px 5px black;
+    position: relative;
+    float: right;
+    top: 10%;
+   
+  }
+  /* EDITANDO GUNDYR */
+  #gundyr{
+      background-image: url(../Imagens/Chefes/GUNDYR/gundyrfundo.jpg);
+      background-size: cover;
+      box-shadow: 5px 5px 5px 5px black;
+  }
+  #img-gundyr1{
+      background-image: url(../Imagens/Chefes/GUNDYR/gifgundyr1.webp);
+  }
+  #img-gundyr2{
+    background-image: url(../Imagens/Chefes/GUNDYR/gifgundyr2.webp);
+}
+
+/* EDITANDO VORDT */
+
+#vordt{
+    background-image: url(../Imagens/Chefes/vordt/vordtfundo.jpg);
+    background-size: cover;
+    box-shadow: 5px 5px 5px 5px black;
+}
+#img-vordt1{
+    background-image: url(../Imagens/Chefes/vordt/gifvordt1.webp);
+}
+#img-vordt2{
+  background-image: url(../Imagens/Chefes/vordt/gifvordt2.webp);
+}
+
+/* EDITANDO ARVORE*/
+
+#arvore{
+    background-image: url(../Imagens/Chefes/arvore/arvorefundo.jpg);
+    background-size: cover;
+    box-shadow: 5px 5px 5px 5px black;
+}
+#img-arvore1{
+    background-image: url(../Imagens/Chefes/arvore/gifarvore1.webp);
+}
+#img-arvore2{
+  background-image: url(../Imagens/Chefes/arvore/gifarvore2.webp);
+}
+
+/* EDITANDO SABIO*/
+
+#sabio{
+    background-image: url(../Imagens/Chefes/SABIO/fundosabio.jpg);
+    background-size: cover;
+    box-shadow: 5px 5px 5px 5px black;
+}
+#img-sabio1{
+    background-image: url(../Imagens/Chefes/sabio/gifsabio1.webp);
+}
+#img-sabio2{
+  background-image: url(../Imagens/Chefes/SABIO/gifsabio2.gif);
+}
+
+/* EDITANDO DIACONOOS  */
+
+#padres{
+    background-image: url(../Imagens/Chefes/SABIO/fundosabio.jpg);
+    background-size: cover;
+    box-shadow: 5px 5px 5px 5px black;
+}
+#img-diaconos1{
+    background-image: url(../Imagens/Chefes/diaconos/gifdiaconos1.jfif);
+    background-size: cover;
+}
+#img-diaconos2{
+  background-image: url(../Imagens/Chefes/diaconos/gifdiaconos2.gif);
+  background-size: cover;
+}
+
+/* EDITANDO VIGILANTES  */
+
+#abyss{
+    background-image: url(../Imagens/Chefes/VIGILANTES/fundovigilantes.jpg);
+    background-size: cover;
+    box-shadow: 5px 5px 5px 5px black;
+}
+#img-vigilantes1{
+    background-image: url(../Imagens/Chefes/vigilantes/gifvigilantes1.gif);
+    background-size: cover;
+}
+#img-vigilantes2{
+  background-image: url(../Imagens/Chefes/vigilantes/gifvigilantes2.webp);
+  background-size: cover;
+}
+
+/* EDITANDO WOLNIR */
+
+#lord{
+    background-image: url(../Imagens/Chefes/WOLNIR/fundowolnir.png);
+    background-size: cover;
+    box-shadow: 5px 5px 5px 5px black;
+}
+#img-wolnir1{
+    background-image: url(../Imagens/Chefes/wolnir/gifwolnir2.gif);
+    background-size: cover;
+
+}
+#img-wolnir2{
+  background-image: url(../Imagens/Chefes/WOLNIR/gifwolnir1.gif);
+  background-size: cover;
+}
+
+/* EDITANDO ANTIGO REI DEMONIO */
+
+#velho{
+    background-image: url(../Imagens/Chefes/REIDEMONIO/fundoantigo.jpg);
+    background-size: cover;
+    box-shadow: 5px 5px 5px 5px black;
+}
+#img-antigo1{
+    background-image: url(../Imagens/Chefes/REIDEMONIO/gifantigo1.jfif);
+    background-size: cover;
+
+}
+#img-antigo2{
+  background-image: url(../Imagens/Chefes/REIDEMONIO/gifantigo2.jpg);
+  background-size: cover;
+}
+
+/* EDITANDO PONTIFICE SULYVAHN */
+
+#pont{
+    background-image: url(../Imagens/Chefes/SULYVAHN/fundosulyvahn.jpg);
+    background-size: cover;
+    box-shadow: 5px 5px 5px 5px black;
+}
+#img-sulyvahn1{
+    background-image: url(../Imagens/Chefes/SULYVAHN/gifsulyvahn1.gif);
+    background-size: cover;
+
+}
+#img-sulyvahn2{
+  background-image: url(../Imagens/Chefes/SULYVAHN/gifsulyvahn2.webp);
+  background-size: cover;
+}
+
+/* EDITANDO ALDRICH */
+
+#aldri{
+    background-image: url(../Imagens/Chefes/ALDRICH/fundoaldrich.jpg);
+    background-size: cover;
+    box-shadow: 5px 5px 5px 5px black;
+}
+#img-aldrich1{
+    background-image: url(../Imagens/Chefes/ALDRICH/gifaldrich1.gif);
+    background-size: cover;
+
+}
+#img-aldrich2{
+  background-image: url(../Imagens/Chefes/ALDRICH/gifaldrich2.gif);
+  background-size: cover;
+}
+
+/* EDITANDO YHORM*/
+
+#yhorm{
+    background-image: url(../Imagens/Chefes/YHORM/gundoyhorm.jpg);
+    background-size: cover;
+    box-shadow: 5px 5px 5px 5px black;
+}
+#img-yhorm1{
+    background-image: url(../Imagens/Chefes/YHORM/gifyhorm1.gif);
+    background-size: cover;
+
+}
+#img-yhorm2{
+  background-image: url(../Imagens/Chefes/YHORM/gifyhorm2.webp);
+  background-size: cover;
+}
+
+/* EDITANDO DANÇARINA*/
+
+#dançarina{
+    background-image: url(../Imagens/Chefes/DANÇARINA/fundodançarina.jpg);
+    background-size: cover;
+    box-shadow: 5px 5px 5px 5px black;
+}
+#img-dançarina1{
+    background-image: url(../Imagens/Chefes/DANÇARINA/gifdançarina1.gif);
+    background-size: cover;
+
+}
+#img-dançarina2{
+  background-image: url(../Imagens/Chefes/DANÇARINA/gifdançarina2.gif);
+  background-size: cover;
+}
+
+/* EDITANDO OCEIROS*/
+
+#oceiros{
+    background-image: url(../Imagens/Chefes/oceiros/fundooceiros.jpg);
+    background-size: cover;
+    box-shadow: 5px 5px 5px 5px black;
+}
+#img-oceiros1{
+    background-image: url(../Imagens/Chefes/oceiros/gifoceiros1.jfif);
+    background-size: cover;
+
+}
+#img-oceiros2{
+  background-image: url(../Imagens/Chefes/oceiros/gifoceiros2.gif);
+  background-size: cover;
+}
+
+/* EDITANDO CHAMPION*/
+
+#gundyr2{
+    background-image: url(../Imagens/Chefes/CHAMPIONGUNDYR/fundochampion.jpg);
+    background-size: cover;
+    box-shadow: 5px 5px 5px 5px black;
+}
+#img-champion1{
+    background-image: url(../Imagens/Chefes/CHAMPIONGUNDYR/gifchampion1.jpg);
+    background-size: cover;
+
+}
+#img-champion2{
+  background-image: url(../Imagens/Chefes/CHAMPIONGUNDYR/gifgundyr2.png);
+  background-size: cover;
+}
+
+/* EDITANDO ARMADURA*/
+
+#armadura{
+    background-image: url(../Imagens/Chefes/ARMADURA/fundoarmadura.jpg);
+    background-size: cover;
+    box-shadow: 5px 5px 5px 5px black;
+}
+#img-armadura1{
+    background-image: url(../Imagens/Chefes/ARMADURA/gifarmadura1.gif);
+    background-size: cover;
+
+}
+#img-armadura2{
+  background-image: url(../Imagens/Chefes/ARMADURA/gifarmadura2.gif);
+  background-size: cover;
+}
+
+/* EDITANDO PRINCIPES*/
+
+#lorian{
+    background-image: url(../Imagens/Chefes/LORIAN/fundoprincipes.jpg);
+    background-size: cover;
+    box-shadow: 5px 5px 5px 5px black;
+}
+#img-principes1{
+    background-image: url(../Imagens/Chefes/LORIAN/giflorian1.gif);
+    background-size: cover;
+
+}
+#img-principes2{
+  background-image: url(../Imagens/Chefes/LORIAN/giflorian2.gif);
+  background-size: cover;
+}
+
+/* EDITANDO WYVERN*/
+
+#dragon{
+    background-image: url(../Imagens/Chefes/WYVERN/fundowyvern.jpg);
+    background-size: cover;
+    box-shadow: 5px 5px 5px 5px black;
+}
+#img-wyvern1{
+    background-image: url(../Imagens/Chefes/WYVERN/gifwyvern1.gif);
+    background-size: cover;
+
+}
+#img-wyvern2{
+  background-image: url(../Imagens/Chefes/WYVERN/gifwyvern2.gif);
+  background-size: cover;
+}
+
+/* EDITANDO REI SEM NOME*/
+
+#king{
+    background-image: url(../Imagens/Chefes/REISEMNOME/fundorei.jpg);
+    background-size: cover;
+    box-shadow: 5px 5px 5px 5px black;
+}
+#img-king1{
+    background-image: url(../Imagens/Chefes/REISEMNOME/gifrei1.gif);
+    background-size: cover;
+
+}
+#img-king2{
+  background-image: url(../Imagens/Chefes/REISEMNOME/gifrei2.gif);
+  background-size: cover;
+}
+/* EDITANDO IRMÃ FRIEDE*/
+
+#irmã{
+    background-image: url(../Imagens/Chefes/FRIDA/fundofrida.jpg);
+    background-size: cover;
+    box-shadow: 5px 5px 5px 5px black;
+}
+#img-frida1{
+    background-image: url(../Imagens/Chefes/FRIDA/giffrida1.gif);
+    background-size: cover;
+
+}
+#img-frida2{
+  background-image: url(../Imagens/Chefes/FRIDA/giffrida2.gif);
+  background-size: cover;
+}
+
+/* EDITANDO PRINCIPE DEMONIO*/
+
+#principe{
+    background-image: url(../Imagens/Chefes/PRINCIPEDEMONIO/gifprincepedemonio2.jpg);
+    
+    box-shadow: 5px 5px 5px 5px black;
+}
+#img-principedemonio1{
+    background-image: url(../Imagens/Chefes/PRINCIPEDEMONIO/gifprincepedemonio1.png);
+    background-size: cover;
+
+}
+#img-principedemonio2{
+  background-image: url(../Imagens/Chefes/PRINCIPEDEMONIO/gifpricipe1.jpg);
+  background-size: cover;
+}
+
+/* EDITANDO MIDIR*/
+
+#midir{
+    background-image: url(../Imagens/Chefes/MIDIR/fundomidir.jpg);
+    background-size: cover;
+    box-shadow: 5px 5px 5px 5px black;
+}
+#img-midir1{
+    background-image: url(../Imagens/Chefes/MIDIR/gifmidir1.gif);
+    background-size: cover;
+
+}
+#img-midir2{
+  background-image: url(../Imagens/Chefes/MIDIR/gifmidir2.gif);
+  background-size: cover;
+}
+
+/* EDITANDO GAEL*/
+
+#gael{
+    background-image: url(../Imagens/Chefes/GAEL/fundogael.jpg);
+    background-size: cover;
+    box-shadow: 5px 5px 5px 5px black;
+}
+#img-gael1{
+    background-image: url(../Imagens/Chefes/GAEL/gifgael1.gif);
+    background-size: cover;
+
+}
+#img-gael2{
+  background-image: url(../Imagens/Chefes/GAEL/gifgael2.gif);
+  background-size: cover;
+}
+
+/* EDITANDO SOUL OF CINDER*/
+
+#cinder{
+    background-image: url(../Imagens/Chefes/CINDER/fundocinder.jpg);
+    background-size: cover;
+    box-shadow: 5px 5px 5px 5px black;
+}
+#img-cinder1{
+    background-image: url(../Imagens/Chefes/CINDER/gifcinder1.gif);
+    background-size: cover;
+
+}
+#img-cinder2{
+  background-image: url(../Imagens/Chefes/CINDER/gifcinder2.gif);
+  background-size: cover;
+}

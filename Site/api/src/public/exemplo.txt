@@ -1,0 +1,69 @@
+
+
+
+// url padrão da api 
+// SEMPRE UTILIZE A VARIÁVEL URL!
+let url = 'http://localhost:3333';
+
+// Exemplo para o cadastro do usuário
+fetch(url + '/user', {
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    },
+    method: "POST",
+    body: JSON.stringify({ 
+        name: idDoNome.value,
+        email: idDoEmail.value, 
+        password: idDaSenha.value
+        })
+    
+}).then(resposta => {
+    if(resposta.ok) {
+        resposta.json().then(json => {
+            console.log(json.message)
+            // Caso o usuario foi criado com sucesso
+            if(json.message == "Usuário criado com sucesso!") {
+
+                // Tempo de espera para redirecionar para outra página
+                // após o cadastro
+                setTimeout(() => {
+                    window.location.href = 'login.html'
+                }, 1200);
+            }
+            // Caso o usuario já exista
+            if(json.message == "Esse usuário já existe!") {
+               
+            }
+        });
+    }
+});
+    
+
+
+// Exemplo para o login do usuário
+
+fetch(url + '/login', {
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    },
+    method: "POST",
+    body: JSON.stringify({ 
+        email: idDoEmail.value, 
+        senha: idDaSenha.value
+    })
+    
+}).then(resposta => {
+    if(resposta.ok) {
+        resposta.json().then(json => {
+            console.log(json.message)
+            // Se o login estiver certo
+            if(json.message == "Login feito com sucesso!") {
+                window.location.href = "../pages/lista-usuarios.html";
+            } else {
+               
+            }
+        });
+    }
+});

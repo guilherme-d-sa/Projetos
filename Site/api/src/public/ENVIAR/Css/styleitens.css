@@ -1,0 +1,200 @@
+@font-face {
+    font-family: 'ds-normal';
+    src: url(../Fontes/optimusprinceps-webfont.woff2) format('woff2'),
+         url(../Fontes/optimusprinceps-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'ds-bold';
+    src: url(../Fontes/optimusprincepssemibold-webfont.woff2) format('woff2'),
+         url(../Fontes/optimusprincepssemibold-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+
+
+header{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 13;
+}
+
+/* menu */
+.menu{
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    font-family: 'ds-bold';
+    text-shadow: -2px 1px 5px #ce310d;
+    position: absolute;
+    left: 6%;
+
+    
+}
+
+
+.menu ul {
+list-style: none;
+position: relative;
+
+}
+.menu ul li{
+    width: 224px;
+    float: left;
+    
+    
+}
+.menu a{
+    padding: 15px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    background-color:transparent;
+    color:#fff;
+    border-bottom: white 1px solid;
+    margin-left: 5%;
+}
+.menu ul ul {
+    position: absolute;
+    visibility: hidden;
+    
+}
+.menu ul :hover ul{
+    visibility: visible;
+}
+.menu a:hover{
+    background-color:#f4f4f4;
+    color:#555;
+    transition: .7s;
+}
+.menu ul ul li{
+    float: none;
+    /* border-bottom: solid 1px #ccc; */
+    
+}
+.menu ul ul li a{
+    background-color: black;
+    
+}
+
+/* Menu responsivo */
+ label[for="bt_menu"]{
+     padding: 5px;
+     background-color: #222;
+     color: #fff;
+     font-family: Arial, Helvetica, sans-serif;
+     text-align: center;
+     font-size: 30px;
+     cursor: pointer;
+     width: 50px;
+     height: 50px;
+ }
+  /* deixando a check box invisilve */
+  #bt_menu{
+      display: none;
+  }
+  /* botão invisivel na tela grande */
+
+  label[for="bt_menu"]{
+      display: none;
+  }
+
+ /* Visual da pagina pequena */
+
+@media(max-width:800px){
+    header{
+        background-color: none;
+    }
+
+    label[for="bt_menu"]{
+        display: block;
+    }
+
+    #bt_menu:checked ~ .menu{
+        margin-left: 0;
+    }
+
+    .menu{
+        margin-left: -100%;
+        transition: all .4s;
+        position: absolute;
+        left: 0%;
+    }
+
+    .menu ul li{
+        width: 100%;
+        float: none;
+        position: relative;
+        left: 0%;
+    }
+    .menu ul ul{
+        position: relative;
+        overflow: hidden;
+        max-height: 0;
+        transition: all .4s;
+        left: 0%;
+    }
+    .menu ul li:hover ul{
+        height: auto;
+        max-height: 200px;
+    }
+    
+}
+/* Configurando os sections */
+/* Sections da home */
+.bloco{
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+#oqe{
+    background-color: #080818;
+    background-image: url(../Imagens/Home/oqe.png);
+    z-index: 0;
+}
+#universo{
+    background-color: darkorchid;
+    background-image: url(../Imagens/Home/universo.jpg);
+    z-index: 0;
+}
+#lore{
+    background-color: #382C30;
+}
+#lore2{
+    background-color: #382C30;
+}
+
+/* Sections do mapa*/
+#inicio{
+    background-color: aqua;
+}
+
+/* Selections chefes */
+#inicio_chefes{
+    background-color: purple;
+}
+
+/* Selections Itens */
+#inicio_itens{
+    background-color: forestgreen;
+}

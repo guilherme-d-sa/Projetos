@@ -1,0 +1,738 @@
+@font-face {
+    font-family: 'ds-normal';
+    src: url(../Fontes/optimusprinceps-webfont.woff2) format('woff2'),
+         url(../Fontes/optimusprinceps-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'ds-bold';
+    src: url(../Fontes/optimusprincepssemibold-webfont.woff2) format('woff2'),
+         url(../Fontes/optimusprincepssemibold-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+
+
+header{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 13;
+}
+
+/* menu */
+.menu{
+    width: 84%;
+    height: 50px;
+    background-color: transparent;
+    font-family: 'ds-bold';
+    text-shadow: -2px 1px 5px #ce310d;
+    position: absolute;
+    left: 6%;
+
+    
+}
+
+
+.menu ul {
+list-style: none;
+position: relative;
+
+}
+.menu ul li{
+    width: 224px;
+    float: left;
+    
+    
+}
+.menu a{
+    padding: 15px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    background-color:transparent;
+    color:#fff;
+    border-bottom: white 1px solid;
+    margin-left: 5%;
+}
+.menu ul ul {
+    position: absolute;
+    visibility: hidden;
+    
+}
+.menu ul :hover ul{
+    visibility: visible;
+}
+.menu a:hover{
+    background-color:#f4f4f4;
+    color:#555;
+    transition: .7s;
+}
+.menu ul ul li{
+    float: none;
+    /* border-bottom: solid 1px #ccc; */
+    
+}
+.menu ul ul li a{
+    background-color: black;
+    
+}
+
+/* Menu responsivo */
+ label[for="bt_menu"]{
+     padding: 5px;
+     background-color: #222;
+     color: #fff;
+     font-family: Arial, Helvetica, sans-serif;
+     text-align: center;
+     font-size: 30px;
+     cursor: pointer;
+     width: 50px;
+     height: 50px;
+ }
+  /* deixando a check box invisilve */
+  #bt_menu{
+      display: none;
+  }
+  /* botão invisivel na tela grande */
+
+  label[for="bt_menu"]{
+      display: none;
+  }
+
+ /* Visual da pagina pequena */
+
+@media(max-width:800px){
+    header{
+        background-color: none;
+    }
+
+    label[for="bt_menu"]{
+        display: block;
+    }
+
+    #bt_menu:checked ~ .menu{
+        margin-left: 0;
+    }
+
+    .menu{
+        margin-left: -100%;
+        transition: all .4s;
+        position: absolute;
+        left: 0%;
+    }
+
+    .menu ul li{
+        width: 100%;
+        float: none;
+        position: relative;
+        left: 0%;
+    }
+    .menu ul ul{
+        position: relative;
+        overflow: hidden;
+        max-height: 0;
+        transition: all .4s;
+        left: 0%;
+    }
+    .menu ul li:hover ul{
+        height: auto;
+        max-height: 200px;
+    }
+    
+}
+/* Configurando os sections */
+/* Sections da home */
+.bloco{
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+#oqe{
+    background-color: #080818;
+    background-image: url(../Imagens/Home/oqe.png);
+    z-index: 0;
+}
+#universo{
+    background-color: darkorchid;
+    background-image: url(../Imagens/Home/universo.jpg);
+    z-index: 0;
+}
+#lore{
+    background-color: #382C30;
+}
+#lore2{
+    background-color: #382C30;
+}
+
+/* Sections do mapa*/
+#inicio{
+    background-color: aqua;
+}
+
+/* Selections chefes */
+#inicio_chefes{
+    background-color: purple;
+}
+
+/* Selections Itens */
+#inicio_itens{
+    background-color: forestgreen;
+}
+
+/* Seção 1 */
+
+.container{
+    width: 1239px;
+    height: 495px;
+    border: #fff4f4bf 1px solid;
+    
+}
+
+.conteudo1{
+    width: 50%;
+    height: 100%;
+    border: #ffffffad 1px solid;
+    background-image: url(../Imagens/Home/afd4424e70a24e003c3b8c873f079b8e.gif);
+    background-size: cover;
+    
+    background-position-y: 100%;
+    background-repeat: no-repeat;
+    transform: rotate(-3deg);
+    
+    
+}
+.conteudo2{
+    float: right;
+    border: white 2px solid ;
+    width: 528px;
+    height: 101px;
+    padding: 10px;
+    top: 10%;
+    right: 3%;
+    /* bottom: 41%; */
+    position: relative;
+    border-top: none;
+    border-bottom: none;
+}
+.conteudo2 h1{
+    color: white;
+    text-align: center;
+    display: block;
+    font-size: 50px;
+    line-height: 0.85;
+    font-family: 'ds-bold';
+    font-weight: 80;
+    letter-spacing: 0.03em;
+    text-shadow: -2px 1px 5px #ce310d;
+
+}
+.conteudo3{
+    border-bottom: white 1px solid;
+    float: right;
+    width: 528px;
+    height: 170px;
+    position: relative;
+    right: -41%;
+    top: 54%;
+    font-family: 'ds-normal';
+
+}
+.conteudo3 p{
+    max-width: 660px;
+    text-align: center;
+    
+    letter-spacing: 0.08em;
+    line-height: 1.6;
+    margin: 20px auto 0px;
+    color: white;
+    text-shadow: -2px 1px 5px #ce310d;
+}
+
+/* Seção 1 */
+
+/* -------------------------------------------------- */
+
+/* Seção 2 */
+
+
+.container-universo{
+    border: black 1px solid;
+    width: 100%;
+    height: 100%;
+}
+.conteudo1-universo{
+    border: #756a6a 1px solid;
+    width: 30%;
+    height: 76%;
+    position: relative;
+    left: 2%;
+    top: 12%;
+    box-shadow: -5px 4px 5px 6px;
+    z-index: 2;
+
+}
+.foto-frase{
+    
+    width: 96%;
+    height: 97%;
+    top: 1%;
+    left: 2%;
+    position: absolute;
+    z-index: 0;
+    background-image: url(../Imagens/Home/sulivan.jpg);
+    background-size: cover;
+    box-shadow: -10px 5px 8px 8px black;
+}
+.pontifice{
+    background-image: url(../Imagens/Home/sulivan.jpg);
+    width: 100%;
+    height: 71%;
+    position: relative;
+    background-size: cover;
+    top: 14%;
+    box-shadow: 0px 1px 5px 5px;
+    z-index: 1;
+}
+.conteudo1-universo h1{
+    color: white;
+    text-align: center;
+    margin-top: 19%;
+    font-size: 40px;
+    font-family: 'ds-bold';
+    z-index: 4;
+    position: absolute;
+    left: 19%;
+    text-shadow: -2px 1px 5px #ce310d;
+}
+
+.conteudo2-universo{
+    border: #756a6a 1px solid;
+    width: 28%;
+    height: 33%;
+    position: absolute;
+    left: 55%;
+    top: 106%;
+    box-shadow: -5px 4px 5px 6px;
+    transform: rotate(-3deg);
+    z-index: 1;
+}
+.quadrados,.conteudo2-universo {
+    text-decoration: none;
+    list-style: none;
+    box-shadow: -5px 4px 5px 6px black;
+}
+.foto-mapa{
+    border: #756a6a 1px solid;
+    width: 92%;
+    height: 86%;
+    top: 6%;
+    left: 4%;
+    position: relative;
+    background-image: url(../Imagens/Home/14613.gif);
+    background-size: cover;
+    box-shadow: -8px 6px 2px 0px black;
+    
+}
+.foto-mapa:hover{
+    width: 92%;
+    height: 86%;
+    top: 6%;
+    left: 4%;
+    position: relative;
+}
+.conteudo2-universo:hover{
+   
+    width: 30%;
+    height: 40%;
+    transition: .5s;
+    z-index: 3;
+    
+}
+.conteudo2-universo h1{
+    color: white;
+    text-align: center;
+    margin-top: 19%;
+    font-size: 40px;
+    font-family: 'ds-bold';
+    z-index: 6;
+    list-style: none;
+    position: relative;
+    text-shadow: -2px 1px 5px #ce310d;
+}
+
+.conteudo3-universo{
+    border: #756a6a 1px solid;
+    width: 28%;
+    height: 33%;
+    position: absolute;
+    left: 34%;
+    top: 145%;
+    box-shadow: -5px 4px 5px 6px;
+    transform: rotate(-3deg);
+    z-index: 1;
+
+}
+.quadrados,.conteudo3-universo {
+    text-decoration: none;
+    list-style: none;
+    box-shadow: -5px 4px 5px 6px black;
+}
+.foto-chefes{
+    border: #756a6a 1px solid;
+    width: 92%;
+    height: 86%;
+    top: 6%;
+    left: 4%;
+    position: relative;
+    background-image: url(../Imagens/Home/abyssgif.gif);
+    background-size: cover;
+    box-shadow: -8px 6px 2px 0px black;
+
+}
+.foto-chefes:hover{
+    width: 92%;
+    height: 86%;
+    top: 6%;
+    left: 4%;
+    position: relative;
+}
+.conteudo3-universo:hover{
+    width: 30%;
+    height: 40%;
+   
+    transition: .5s;
+    z-index: 3;
+}
+.conteudo3-universo h1{
+   color: white;
+    text-align: center;
+    margin-top: 19%;
+    font-size: 40px;
+    font-family: 'ds-bold';
+    z-index: 6;
+    list-style: none;
+    position: relative;
+    text-shadow: -2px 1px 5px #ce310d;
+}
+
+.conteudo4-universo{
+    border: #756a6a 1px solid;
+    width: 28%;
+    height: 33%;
+    position: absolute;
+    left: 67%;
+    top: 166%;
+    box-shadow: -5px 4px 5px 6px;
+    transform: rotate(-3deg);
+    z-index: 1;
+}
+.quadrados,.conteudo4-universo {
+    text-decoration: none;
+    list-style: none;
+    box-shadow: -5px 4px 5px 6px black;
+}
+.foto-itens{
+    border: #756a6a 1px solid;
+    width: 92%;
+    height: 86%;
+    top: 6%;
+    left: 4%;
+    position: relative;
+    background-image: url(../Imagens/Home/itensgif.gif);
+    background-size: cover;
+    box-shadow: -8px 6px 2px 0px black;
+
+}
+.foto-itens:hover{
+    width: 92%;
+    height: 86%;
+    top: 6%;
+    left: 4%;
+    position: relative;
+}
+.conteudo4-universo:hover{
+    
+    width: 30%;
+    height: 40%;
+   
+    transition: .5s;
+    z-index: 3;
+}
+.conteudo4-universo h1{
+    color: white;
+    text-align: center;
+    margin-top: 19%;
+    font-size: 40px;
+    font-family: 'ds-bold';
+    z-index: 2;
+    text-shadow: -2px 1px 5px #ce310d;
+}
+/* Seção 2 */
+
+/* ---------------------------------------------------- */
+
+/* Seção 3 */
+
+/* O video ta aqui dentro */
+
+.titulo{
+   
+    position: absolute;
+    top: 207%;
+    width: 500px;
+    height: 96px;
+    left: 1%;
+    text-align: center;
+}
+.titulo h1{
+    color: white;
+    padding: 7%;
+    font-size: 61px;
+    font-family: 'ds-bold';
+    text-shadow: -4px 2px 14px black;
+}
+.linha{
+    border: #ffffffd9 1px solid;
+    position: absolute;
+    top: 217%;
+    width: 418px;
+    height: 0px;
+    left: 6%;
+}
+
+.botao-voltar{
+    border: #756a6a 1px solid;
+    position: absolute;
+    top: 209%;
+    width: 356px;
+    height: 96px;
+    left: 65%;
+    transform: rotate(-1deg);
+    box-shadow: -2px 4px 5px 5px black;
+}
+.botao-voltar h1{
+    color: white;
+    left: 35%;
+    top: 17%;
+    position: absolute;
+    font-size: 30px;
+    font-family: 'ds-bold';
+    text-align: center;
+    z-index: 1;
+    text-shadow: -2px 1px 5px #ce310d;
+}
+.botao-voltar a{
+    text-decoration: none;
+}
+.botao-voltar:hover{
+    background-color:black;
+    transition: .5s;
+    width: 466px;
+    height: 100px;
+    
+}
+.content-img{
+    
+    width: 100px;
+    height: 100px;
+   
+}
+.img-into{
+    background-image: url(../Imagens/Login/darksouls-removebg-preview.png);
+    background-size: cover;
+    width: 62%;
+    height: 96%;
+    position: relative;
+    /* top: -17%; */
+    left: 23%;
+}
+
+
+
+.inicio {
+    position: absolute;
+    top: 209%;
+    width: 7%;
+    height: 97px;
+    left: 69%;
+    z-index: 13;
+}
+.img-voltar{
+    
+    width: 143px;
+    height: 94px;
+   
+}
+
+.container-lore-video1{
+    width: 1307px;
+    height: 586px;
+    
+    float: left;
+    position: relative;
+    /* left: 2%; */
+    /* right: 2%; */
+    /* top: 1%; */
+    object-position: center center;
+    z-index: 1;
+}
+.container-lore-video1 video{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    
+}
+.video2{
+    width: 1100px;
+    height: 539px;
+  
+    position: absolute;
+    top: 2%;
+    left: 8%;
+    right: 2%;
+    object-position: center;
+    z-index: 5;
+   
+    
+    
+   
+}
+.video2 video{
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+.borda{
+    border: #ffffff75 1px solid;
+    position: relative;
+    top: -97%;
+    height: 496px;
+    left: 2%;
+    width: 1054px;
+}
+
+
+
+.container-lore-conteudos{
+    width: 1309px;
+    height: 1101px;
+    
+    position: relative;
+    top: 54%;
+}
+
+.lore{
+    border:#1F1D18 1px solid;
+    position: absolute;
+    top: 54%;
+    left: 1%;
+    width: 98%;
+    height: 37%;
+}
+.lore p{
+    color: white;
+    text-align: center;
+    padding: 10%;
+    font-family: 'ds-normal';
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-shadow: -2px 1px 5px #ce310d;
+    
+
+}
+.dentro-da-lore{
+    background-color:  #0d0d0f94;
+    position: relative;
+    top: 5%;
+    left: 1%;
+    
+
+}
+/* ------------------------FIM DA SEÇÃo 3-------------------- */
+
+.fim-da-pagina{
+    border: black 1px solid;
+    width: 1366px;
+    height: 30%;
+    background-color: black;
+    position: absolute;
+    top: 410%;
+    margin: auto;
+}
+.redes{
+   
+    width: 50%;
+    height: 50%;
+    position: relative;
+    top: 21%;
+    left: 25%;
+   
+    
+}
+.redes a{
+    list-style: none;
+    text-decoration: none;
+    text-align: center;
+    /* letter-spacing: 47px; */
+    padding: 47px;
+    position: relative;
+    top: 21%;
+    
+}  
+
+.redes ul{
+    
+    position: absolute;
+    top: 15%;
+    left: 27%;
+    width: 50%;
+    height: 69%;
+    text-align: center;
+    display: flex;
+}
+.itens-midia{
+    border: 1px solid rgb(245, 238, 238);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    color: rgb(250, 239, 239);
+    margin-top: 10px;
+    left: 1%;
+    position: absolute;
+
+}
+.redes{
+    margin: 1rem 0;
+}
+
+.link-icone:not(:first-child){
+    margin-left: 10px;
+}
+.link-icone:hover .itens-midia{
+    background-color: white;
+    color: black;
+}
+
+

@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Open+Sans:wght@300;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    
+    height: 50px;
+    
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.logo{
+    margin: -6px 0px 0px 14px;
+    padding: 0px 10px 0px 0px;
+    float: left;
+    width: 80px;
+    height: 96px;
+    
+}
+    
+   
+
+.voltar{
+     list-style: none;
+    text-decoration: none;
+    color: wheat;
+}
+
+
+/* login */
+.container{
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../Imagens/Login/90943.png);
+    background-size: cover;
+}
+.content{
+    border-radius: 15px;
+    background-color: #0000003d;
+    width: 80%;
+    height: 77%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.content::before{
+    content: "";
+    position: absolute;
+    background-image: url(../Imagens/Login/beforelogin.gif);
+    width: 50%;
+    height: 100%;
+    background-position: 60%;
+    background-repeat: no-repeat;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+   
+}
+/* editandos os textos */
+.titulo{
+   
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.titulo1{
+    color: white;
+}
+.titulo2{
+color: darkorange;
+}
+.descrição{
+    font-size: 14px;
+    font-weight: lighter;
+    line-height: 30px;
+}
+.descrição1{
+    color: #ffffff;
+}
+.descrição2{
+    color: white;
+}
+/* botões */
+.btn{
+    border-radius: 15px;
+    text-transform: uppercase;
+    
+    color: white;
+    font-size: 10px;
+    padding: 10px 50px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 150px;
+    align-self: center;
+    border-width: 0px;
+    margin-top: 10px;
+}
+.btn-direita{
+    background-color: #22211fd8;
+    color: #ffffff;
+}
+.btn-direita:hover{
+    background-color: white;
+    color: #22211fd8;
+    transition: .2s;
+}
+.btn-esquerda{
+    background-color:transparent;
+    color: white;
+    border: 1px solid white;
+}
+.btn-esquerda:hover{
+    background-color: white;
+    color: black;
+    transition: .2s;
+}
+
+/* Primeiro Conteudo */
+.first-content{
+    display: flex;
+    
+}
+
+
+
+.first-content .segunda-coluna{
+    z-index: 10;
+
+}
+/* configurando colunas */
+.primeira-coluna{
+    text-align: center;
+    width: 40%;
+    z-index: 10;
+}
+.segunda-coluna{
+  display: flex;
+  width: 53%;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.midia{
+    margin: 1rem 0;
+}
+
+.link-icone:not(:first-child){
+    margin-left: 10px;
+}
+.link-icone:hover .itens-midia{
+    background-color: white;
+    color: black;
+}
+.lista{
+    display: flex;
+    list-style-type: none;
+}
+.itens-midia{
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    color: black;
+    margin-top: 10px
+
+}
+
+
+
+/* estilo inputs */
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    text-align: center;
+}
+.form input{
+    height: 45px;
+    border: none;
+    background-color: white;
+   width: 100%;
+   
+   
+
+}
+.label-input{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    margin: 8px;
+}
+.icone-modify{
+    padding: 0 5px;
+}
+
+/* SEGUNDO CONTEUDO */
+.second-content{
+    position: absolute;
+    display: flex;
+}
+.second-content .primeira-coluna{
+    order: 2;
+    z-index: -1;
+}
+.second-content .segunda-coluna{
+    order: 1;
+    z-index: -1;
+}
+.hollow{
+color: rgba(255, 255, 255, 0.651);
+font-size: 14px;
+
+/* Configurando as animaçoes */
+}
+.sign-in-js .first-content .primeira-coluna,
+.sign-in-js .first-content .segunda-coluna{
+    z-index: -1;
+}
+
+.sign-in-js .second-content .segunda-coluna{
+    z-index: 11;
+}
+/* unico lugar que deu certo.... */
+.sign-in-js .second-content .primeira-coluna{
+    z-index: 13;
+}
+.sign-in-js .content::before{
+    left: 50%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    animation: slidein 2s;
+    z-index: 12;
+  
+}
+.sign-up-js .content::before{
+    animation: slideout 2s;
+    z-index: 12;
+      
+  
+}
+
+.sign-up-js .second-content .primeira-coluna,
+.sign-up-js .second-content .segunda-coluna{
+    z-index: -1;
+}
+
+.sign-up-js .first-content .segunda-coluna{
+    z-index: 11;
+}
+.sign-up-js .first-content .primeira-coluna{
+    z-index: 13;
+}
+
+
+/* Animação de transição */
+/* INDO */
+@keyframes slidein{
+    0% {
+        left: 0;
+        width: 50%;
+
+    }
+    25%{
+        left: 25%;
+        width: 40%;
+
+    }
+    50%{
+        left: 40%;
+        width: 60%;
+
+    }
+    75%{
+        left: 50%;
+        width: 50%;
+
+    }
+    100% {
+        left: 50%;
+        width: 50%;
+
+    }
+}
+/* VOLTANDO */
+@keyframes slideout{
+    0% {
+        left: 50%;
+        width: 50%;
+    }
+    25%{
+        left: 60%;
+        width: 40%;
+
+
+    }
+    50%{
+        left: 40%;
+        width: 60%;
+
+    }
+    75%{
+        left: 25%;
+        width: 50%;
+
+    }
+    100% {
+        left: 0;
+        width: 50%;
+
+    }
+}

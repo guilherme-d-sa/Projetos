@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Imagens e Cores Poliglota</string>
+    <string name="boa_noite">Buenas noches</string>
+    <string name="cumprimento">Bien venido</string>
+
+    <color name="cor_padrao">#14B117</color>
+
+    <drawable name="img_idioma">@mipmap/spain</drawable>
+</resources>

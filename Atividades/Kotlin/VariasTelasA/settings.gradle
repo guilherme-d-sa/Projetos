@@ -1,0 +1,2 @@
+rootProject.name = "Varias Telas A"
+include ':app'

@@ -1,0 +1,2 @@
+rootProject.name = "Estado e Várias Telas A"
+include ':app'

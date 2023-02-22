@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Multilingual Images and colors</string>
+    <string name="boa_noite">Good evening</string>
+    <string name="cumprimento">Welcome</string>
+
+    <color name="cor_padrao">#2252FF</color>
+
+    <drawable name="img_idioma">@mipmap/usa</drawable>
+</resources>

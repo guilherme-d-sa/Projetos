@@ -1,0 +1,2 @@
+rootProject.name = "Figuras e Cores A"
+include ':app'

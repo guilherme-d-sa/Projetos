@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Imagens e Cores Poliglota</string>
+
+    <string name="boa_noite">Boa noite</string>
+    <string name="cumprimento">Bem vindo</string>
+
+    <color name="cor_padrao">#FF2244</color>
+
+    <drawable name="img_idioma">@mipmap/brasil</drawable>
+</resources>

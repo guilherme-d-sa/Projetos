@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input placeholder="Digite seu nome" id="nome" onkeyup="analisar()" >
+    <div id="mensagem"></div>
+</body>
+</html>
+<script>
+    function analisar(){
+    var valor_nome = nome.value;
+
+    mensagem.innerHTML = ''
+
+    if(valor_nome.trimStart().length == 0){
+    mensagem.innerHTML='Nome deve se informado!';
+}
+
+
+
+
+else{
+    mensagem.innerHTML = `Nome OK`;
+}
+
+}
+
+</script>

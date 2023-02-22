@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   Informe a frase: <input type="text" id="frase">
+    <br>
+   Informe a quantidade de vezes: <input type="text" id="vezes">
+    <br>
+    <button onclick="exibir()">Exiba frases</button>
+    <br>
+    <div id="mensagem"></div>
+</body>
+</html>
+<script>
+function exibir(){
+    var valor_frase = (frase.value)
+    var valor_vezes = Number(vezes.value)
+    for(contador=1; contador<= valor_vezes;contador++){
+        mensagem.innerHTML += `${contador} ${valor_frase} <br>`
+    }
+}
+</script>

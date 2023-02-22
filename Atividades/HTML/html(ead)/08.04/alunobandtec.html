@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Criterios para empresa</h1>
+    <br>
+    Nome da empresa:
+    <input id="nome1">
+    <br>
+    Valor da bolsa:
+    <input id="bolsa1">
+    <br>
+    Valor do VR:
+    <input id="vr1">
+    <br>
+    Tempo de deslocamento:
+     <input id="tempo1">
+     <br>
+     <button onclick="preferida()">É preferiada ?</button>
+     <br>
+     <div id="mensagem"></div>
+
+</body>
+</html>
+<script>
+function preferida(){
+       var nome=nome1.value;
+       var bolsa=Number(bolsa1.value);
+       var vr=Number(vr1.value);
+       var tempo=Number(tempo1.value);
+
+       if(bolsa>=1800||vr>=20||tempo<=30){
+           mensagem.innerHTML=`A empresa ${nome} é uma de suas preferências`
+       }else{
+           mensagem.innerHTML=`A empresa ${nome} está fora da sua lista`
+       }
+
+}
+</script>

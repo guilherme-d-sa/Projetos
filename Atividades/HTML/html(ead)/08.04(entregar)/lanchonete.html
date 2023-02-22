@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lanchonete</h1>
+Café da Manhã
+     <select  id="combo1">     
+      <option value="ovo">ovos</option>
+      <option value="leite">leite de arroz</option>
+      <option value="bacon">bacon</option>
+     </select>
+     <br>
+Almoço
+     <select  id="combo2">
+         <option value="bife">bife</option>
+         <option value="hambur">hamburguer de soja</option>
+         <option value="fran">frango grelhado</option>
+     </select>
+     <br>
+Janta
+     <select id="combo3">
+         <option value="canha">picanha de soja</option>
+         <option value="cupim">cupim</option>
+         <option value="cora">coração</option>
+     </select>
+     <br>
+     <button onclick="sou()">Sou vegano</button>
+</body>
+</html>
+<script>
+function sou(){
+    var cafe=(combo1.value);
+    var molço=(combo2.value);
+    var janta=(combo3.value);
+    
+    if(cafe=='leite'&&molço=='hambur'&&janta=='canha'){
+        alert('Sim,você é vegano');
+    }else{
+        alert('Não,você não é vegano');
+    }
+
+}
+</script>

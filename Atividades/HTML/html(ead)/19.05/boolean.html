@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input id="renda_indi" placeholder="Qual é a sua renda individual ?">
+    <br> <br>
+    <input id="renda_fami" placeholder="Qual é a sua renda familiar?">
+    <br>
+    <button onclick="analisar()">Analisar auxilio</button>
+    <div id="mensagem"></div>
+   
+
+</body>
+</html>
+<script>
+function analisar(){
+ var valor_renda_indi= Number(renda_indi.value);
+ var valor_renda_fami= Number(renda_fami.value);
+
+ var direito_indi= valor_renda_indi <=1200;
+ var direito_fami= valor_renda_fami <=2500;
+
+ if(direito_indi && direito_fami){
+     mensagem.innerHTML= 'Você tera direito ao auxilio'
+ }
+ else if(!direito_indi){
+mensagem.innerHTML = 'Sua renda individual te impede a receber o auxilio'
+
+ }
+ else if(!direito_fami){
+     mensagem.innerHTML='Sua renda familiar te impede de receber o auxilio'
+
+ }
+
+ 
+
+}
+</script>

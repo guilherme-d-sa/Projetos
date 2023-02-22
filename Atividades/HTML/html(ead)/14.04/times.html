@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Super Times</h1>
+<br> <br>
+<button onclick="sortear()">Sortear Times</button>
+<br>
+<img id="imagem" src="" alt="" style="height: 150px; width: 200px">
+</body>
+</html>
+<script>
+function sortear(){
+        var jogo = parseInt(Math.random()*4) + 1;
+        if(jogo == 1){
+            imagem.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Brasao_do_Sao_Paulo_Futebol_Clube.svg/770px-Brasao_do_Sao_Paulo_Futebol_Clube.svg.png'
+        }
+        else if(jogo == 2){
+            imagem.src = 'https://i.pinimg.com/originals/0b/8f/79/0b8f791f4ce9dec8e455ad107a9156ec.png'  
+        }
+        else if(jogo==3){
+            imagem.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Palmeiras_logo.svg/1200px-Palmeiras_logo.svg.png'
+        }else{
+            imagem.src = 'https://upload.wikimedia.org/wikipedia/pt/b/b4/Corinthians_simbolo.png'
+
+        }
+    }
+
+</script>

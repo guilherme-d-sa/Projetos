@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text " id="xicaras" placeholder="Quantas xicaras">
+    <br>
+    <button onclick="ver()">Ver quantidade</button> <br>
+    <div id="imagem"></div>
+    <img src="" alt=""  height="100px;width100px">
+</body>
+</html>
+<script>
+function ver(){
+    var valor_xicaras = Number(xicaras.value);
+    imagem.innerHTML = ''
+    for(contador=1;contador<=valor_xicaras;contador++){
+            imagem.innerHTML += ' <img src="cafe.jpg" alt=""  height="100px;width100px">'
+            imagem.innerHTML += ' <img src="cafe.jpg" alt=""  height="100px;width100px">'
+            imagem.innerHTML += ' <img src="leite.jpg" alt=""  height="100px;width100px">'
+           
+    }
+}
+</script>

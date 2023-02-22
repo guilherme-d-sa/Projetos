@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Séries Ruins</h1> <br>
+    Informe a última serie <input id="serie"> <br>
+    Toltal de episodios assistidos <input id="episodios">
+    <br>
+    <button onclick="calcular()">Verificar nivel</button><br>
+    <div id="mensagem"></div>
+</body>
+</html>
+<script>
+function calcular(){
+    var ep=(Number(episodios.value)*22)/60;
+    
+mensagem.innerHTML=`Vejo que você gosta da série ${serie.value}`;
+
+if(ep>30){
+mensagem.innerHTML+=`<br></b>Uau, você realmente gosta dessa serie!`
+}
+
+}
+</script>

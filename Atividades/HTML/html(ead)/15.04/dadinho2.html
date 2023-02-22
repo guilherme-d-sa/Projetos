@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Dadinho</h1>
+    <br>
+    <br>
+    <button onclick="joga()">Jogar Dado!</button>
+    <br>
+    <img  id="dadinho" src="" alt=""  style="height: 200px; width: 200px">
+
+</body>
+</html>
+<script>
+function joga(){
+    var dado=parseInt(Math.random()*6)+1;
+    if (dado==1){
+        dadinho.src='https://image.freepik.com/icones-gratis/dado-com-seis-faces_318-644.jpg';
+
+    }else if(dado==2){
+        dadinho.src='https://image.freepik.com/iconos-gratis/dado-resultado-dos_318-9039.jpg';
+    }else if(dado==3){
+        dadinho.src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTSlvq2ah__9k4Uo3WZcL_iIvkPdx0Eejv07si1w8S8hPjzGOvl&usqp=CAU';
+    }
+        else if(dado==4){
+            dadinho.src='https://cdn2.iconfinder.com/data/icons/dice-roll/100/dice_black_4-512.png';
+        }
+        else if(dado==5){
+            dadinho.src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRSYVeh3PYrE_UZ9CA_tCWyJ7m6euUjuiwOleqCMUIyUE1ZiQ5S&usqp=CAU';
+        }
+        else{
+            dadinho.src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSXXAzoxYHXYvS86-ENrbYZHzec51dY5xBIlgthin0xsRNg4CNd&usqp=CAU';
+        }
+    }
+
+</script>

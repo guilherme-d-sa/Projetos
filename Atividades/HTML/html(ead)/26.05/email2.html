@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input placeholder="Digite seu e-mail" id="email" onkeyup="analisar()">
+
+    <div id="mensagem"></div>
+</body>
+</html>
+<script>
+    function analisar(){
+    var valor_email = email.value;
+
+    if(valor_email.indexOf('@')>=0&&valor_email.indexOf('.')>=0){
+mensagem.innerHTML = `E-mail Valido`
+    }
+   
+    else{
+        mensagem.innerHTML = `E-mail invalido`
+    }
+
+
+    
+    
+}
+    
+</script>

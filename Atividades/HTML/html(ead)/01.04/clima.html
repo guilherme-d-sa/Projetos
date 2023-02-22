@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Temperatura do ambiente</h1><br>
+     <input id="temperatura" placeholder="Informe a temperatura do ambiente">
+     <br>
+     <button onclick="verificar()">Verificar Temmperatura</button>
+     <br>
+     <img id="imagem" src="" alt="" style="width: 500px" height="500px">
+    
+
+</body>
+</html>
+<script>
+    function verificar(){
+        var valor=(temperatura.value);
+        
+    
+    if(valor<10){
+        imagem.src='https://www.animeunited.com.br/wp-content/uploads/2018/02/13161162.jpg'
+    }else{
+        imagem.src='https://abrilmdemulher.files.wordpress.com/2019/10/meme-jacquin-furioso-pesadelo-na-cozinha-pe-de-fava.jpg?quality=90&strip=info&w=1024&h=575'
+    }
+
+    }
+    
+</script>

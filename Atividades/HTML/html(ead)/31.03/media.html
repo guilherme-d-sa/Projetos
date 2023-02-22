@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Média</h1>
+    <br>
+    <input id="nota1">
+    <br>
+    <input id="nota2">
+    <br>
+    <input id="nota3">
+    <br>
+    <button onclick="analisar()">Analisar Desempenho</button>
+<div id="mensagem"></div>
+<div id="mensagem2"></div>
+</body>
+</html>
+<script>
+function analisar(){
+    var valor_media = Number(nota1.value)+Number(nota2.value)+Number(nota3.value)/3;
+
+
+    if (valor_media >=9.4){
+mensagem2.innerHTML+=`Parabéns, você é fora de série`;
+    }
+
+    mensagem.innerHTML=`Sua média foi de ${valor_media.toFixed(1)}`;
+}
+
+</script>

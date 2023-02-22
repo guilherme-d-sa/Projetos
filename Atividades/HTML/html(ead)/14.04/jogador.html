@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1>Jogador de Dados</h1>
+    <br>
+    <button onclick="jogador1()">Player 1</button>
+    <div id="mensagem"></div>
+    <br> <br>
+    <button onclick="jogador2()">Player 2</button>
+    <div id="mensagem2"></div>
+    <br>
+
+<div id="mensagem3"></div>
+
+
+</body>
+</html>
+<script>
+    var j1= 0;
+    var j2= 0;
+
+function jogador1(){
+   j1=parseInt(Math.random()*6)+1;
+   mensagem.innerHTML= j1;
+
+} 
+
+function jogador2(){
+    j2=parseInt(Math.random()*6)+1;
+   mensagem2.innerHTML= j2;
+
+if(j2>j1){
+    mensagem3.innerHTML=`Jogador 2 venceu`;
+}
+if(j1>j2){
+    mensagem3.innerHTML=`Jogador 1 venceu`;
+}
+if(j1==j2){
+    mensagem3.innerHTML=`Empate`
+}
+}
+
+
+
+
+
+</script>

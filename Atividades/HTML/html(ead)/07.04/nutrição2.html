@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nutricionista</h1>
+    <br>
+    INFORME
+    <br>
+  <input id="paoo" placeholder="Quantos pães franceses por dia ?">
+  <br>
+  <input id="bola" placeholder="Quantos pacotes de bolacha recheada por dia ?">
+  <br>
+  <input id="acho" placeholder="Quantos copos de achocolatado por dia  ?">
+  <br>
+  <button onclick="verificar()">Verificar calorias</button>
+  <br>
+  <div id="mensagem"></div>
+  <br>
+  <img  id="imagem" src="" alt="" style="width: 400px; height: 400px">
+  
+</body>
+</html>
+<script>
+function verificar(){
+    var pao =Number(paoo.value)*50;
+    var bolacha =Number (bola.value)*80;
+    var chocolate = Number(acho.value)*70;
+    var total=(pao)+(bolacha)+(chocolate);
+
+    if(total<200){
+        imagem.src='https://i.pinimg.com/originals/76/47/9d/76479dd91dc55c2768ddccfc30a4fbf5.png'
+    mensagem.innerHTML=`${total} Calorias por dia Parabéns, vai sair em forma da quarentena!`;
+ }else if(total<=400){
+     imagem.src='https://www.pngkey.com/png/full/5-53655_025pikachu-os-anime-pokemon-pikachu-old.png'
+    mensagem.innerHTML=`${total} Calorias por dia Cuidado, vai ficar mais "fofinho(a)" após quarentena!`;
+ }else{
+     imagem.src='https://cdn140.picsart.com/281583714011211.png?type=webp&to=min&r=640'
+    mensagem.innerHTML=`${total} Calorias por dia... Bom, acho que muitos não vão te reconhecer após a quarentena`;
+ }
+}
+</script>

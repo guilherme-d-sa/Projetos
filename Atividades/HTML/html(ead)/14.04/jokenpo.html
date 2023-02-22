@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JOKENPO</h1>
+<br> <br>
+<button onclick="joke()">JOGAR</button>
+<br>
+<img id="imagem" src="" alt="" style="height: 200px; width: 200px">
+</body>
+</html>
+<script>
+function joke(){
+        var jogo = parseInt(Math.random()*3) + 1;
+        if(jogo == 1){
+            imagem.src = 'https://vignette.wikia.nocookie.net/naruto/images/4/47/T%C3%A9cnica_do_Proj%C3%A9til_de_Rocha.png/revision/latest?cb=20160207030601&path-prefix=pt-br'
+        }
+        else if(jogo == 2){
+            imagem.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTAJrr9mNGWJOwM3eUQcgTgZ8j0L8pBw2BG22ZFWSwr31Gu3b4s&usqp=CAU'  
+        }
+        else{
+            imagem.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTgMpuQEOfOH6xClGSnUm3pfOKV9E-BpzllZ-KbSEr-450cX9uB&usqp=CAU'
+        }
+    }
+
+</script>

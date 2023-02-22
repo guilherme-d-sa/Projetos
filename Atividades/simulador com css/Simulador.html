@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center> 
+    <h1><i>Chameleon Solution</i></h1>
+
+    <p style="margin-top: 10px; margin-left: 200px; margin-right: 200px;">
+        A Chameleon Solutios é vitalicia para seu negócio e satisfação de seus clientes!<br>
+        Veja os planos disponiveis para seu Comércio<br><br>
+    
+         Chameleon<sub>Solutions</sub><br><br>
+         Por quantos Meses você gostaria de contratar?<br><br>
+         <input id="mes" placeholder="  Insira o numero de meses"><br>
+         <br>
+         <button style="border-radius: 3%; width: 100px; height: 40px; background-color: cornflowerblue; color: white;" onclick="calcular()">Venha Conosco</button>
+         <br><br>
+         <div id="resultado"></div>
+    </p>
+    
+</center>
+</body>
+</html>
+<script>
+    function calcular(){
+        var meis = Number(mes.value);
+        var tt = meis * 150;
+
+        if (meis < 6){
+            
+             resultado.innerHTML = `Seu plano seria o Simples<br> E seu investimento seria de apenas R$${(tt).toFixed(2)}!`
+    }
+
+        if (meis >=6){
+            if (meis < 12){
+                tt = tt - (tt * 0.05);
+                resultado.innerHTML = `Seu plano seria o Plus<br> E seu investimento seria de apenas R$${(tt).toFixed(2)}!`
+            }
+    }
+
+        if (meis >= 12){
+            tt = tt - (tt * 0.15);
+            
+            resultado.innerHTML = `Seu plano seria o Premiun<br> E seu investimento seria de apenas R$${(tt).toFixed(2)}!`;
+    }
+}
+</script>

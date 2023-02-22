@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Pizzaria Covid19</h1>
+    <br>
+    Informe a distância da sua casa 
+    <br><input id="distancia">
+    <br>
+    <button onclick="verificar()">Verificar disponibilidade</button>
+    <div id="mensagem"></div>
+</body>
+</html>
+<script>
+function verificar(){
+    var dis=Number(distancia.value);
+
+   
+
+    if(dis >=250){
+mensagem.innerHTML=`A Pizza Rãti não entrega neste endereço!`
+    }
+    if(dis <250){
+        if(dis>50){
+            mensagem.innerHTML=`A sua pizza será entregue, porém o valor de entrega é de R$ 25,00`
+        }
+    }
+
+  if(dis <=50){
+      mensagem.innerHTML=`A sua pizza será entregue e não custará nada para você :)`
+  }
+}
+</script>

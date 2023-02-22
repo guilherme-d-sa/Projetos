@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Pizza</h1>
+    Valor da Pizza <br>
+    <input id="valor">
+    <br>
+    Quantidade de amigos 
+    <br>
+    <input id="amigos"><br>
+
+    <button onclick="rolapiz()">Rola pizza ?</button>
+    <div id="mensagem"></div>
+    <div id="mensagem2"></div>
+
+</body>
+</html>
+<script>
+function rolapiz(){
+    var valor_amigos= Number(amigos.value);
+    var valor_pizza= Number(valor.value);
+    var valor_pizza_amigos= Number(valor_pizza)/(valor_amigos);
+ 
+ if (valor_pizza_amigos >=20){
+mensagem2.innerHTML+=`<i> <b style="color: blue">Deu ruim! Pizza muito cara</b></i>`
+ }
+mensagem.innerHTML= `Cada amigo vai pagar R$${valor_pizza_amigos} pela pizza`
+}
+</script>

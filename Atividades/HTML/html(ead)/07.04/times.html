@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Times</h1>
+    <select id="times">
+    <option value="sp">São Paulo</option>
+    <option value="san">Santos</option>
+    <option value="cor">Corinthians</option>
+    <option value="palm">Palmeiras</option>
+</select>
+    <br>
+<button onclick="falar()">Falar Sobre!!</button>
+<br>
+
+<div id="mensagem"></div>
+
+
+    
+</body>
+</html>
+<script>
+function falar(){
+    var time=(times.value);
+    if(time=='sp'){
+        mensagem.innerHTML= `<span style="color: red; background-color: black">Salve o Tricolor paulista</span>`;
+    }else if(time=='san'){
+        mensagem.innerHTML=`<span style="color: black;background-color:white ">Agora quem da a bola é o Santos</span>`;
+    }else if(time=='cor'){
+        mensagem.innerHTML=`<span style="color:white;background-color: black ">Salve o Corinthians</span>`;
+    }else{
+        mensagem.innerHTML=`<span style="color:white;background-color:green"> Salve o alviverde imponente</span>`;
+
+    }
+
+
+     
+}
+</script>

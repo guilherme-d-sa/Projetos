@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nutricionista</h1>
+    <br>
+    INFORME
+    <br>
+  <input id="paoo" placeholder="Quantos pães franceses por dia ?">
+  <br>
+  <input id="bola" placeholder="Quantos pacotes de bolacha recheada por dia ?">
+  <br>
+  <input id="acho" placeholder="Quantos copos de achocolatado por dia  ?">
+  <br>
+  <button onclick="verificar()">Verificar calorias</button>
+  <br>
+  <div id="mensagem"></div>
+  
+</body>
+</html>
+<script>
+function verificar(){
+    var pao =Number(paoo.value)*50;
+    var bolacha =Number (bola.value)*80;
+    var chocolate = Number(acho.value)*70;
+    var total=(pao)+(bolacha)+(chocolate);
+
+    if(total<200){
+    mensagem.innerHTML=`${total} Parabéns, vai sair em forma da quarentena!`;
+ }else if(total<=400){
+    mensagem.innerHTML=`${total} Cuidado, vai ficar mais "fofinho(a)" após quarentena!`;
+ }else{
+    mensagem.innerHTML=`${total} Bom, acho que muitos não vão te reconhecer após a quarentena`;
+ }
+}
+</script>

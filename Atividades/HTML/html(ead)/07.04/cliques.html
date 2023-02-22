@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Você é bom em cliclar ?</h1>
+    <br>
+    Você clicou <b id="vezes">0</b> Vezes
+    <br>
+    <button onclick="clica()">Clica neu!</button>
+    <br>
+    <div id="mensagem" ></div>
+</body>
+</html>
+<script>
+    var cliques =0;
+function clica(){
+    
+    cliques++;
+    
+    vezes.innerHTML = cliques;
+    if(cliques<5){
+        mensagem.innerHTML=`Dedo fraquinho em`;
+
+    }else if(cliques<10){
+    mensagem.innerHTML=`Dedo bom, mano`;
+    }else if (cliques<15){
+        mensagem.innerHTML=`Gosta de clicar, hein`;
+    }else{
+        mensagem.innerHTML=`Eita dedo nervoso`;
+    }
+
+    
+}
+</script>

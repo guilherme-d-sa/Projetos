@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Arroz Cozinhando</h1>
+    <br>
+    <input id="cozinhar" placeholder="Tempo de cozimento" autofocus>
+    <br>
+    <button onclick="provar()">Provar Arroz</button>
+    <br>
+    <div id="mensagem"></div>
+    <br>
+    <img  id="imagem"  src=""  alt="" style="width: 500px" height="500px">
+</body>
+</html>
+<script>
+function provar(){
+    var tempo=Number(cozinhar.value);
+
+    if(tempo==5){
+mensagem.innerHTML=`Parabéns Arroz Perfeito!!`
+imagem.src='https://66.media.tumblr.com/d52b6c57ce46174b7c6b51035f69fee8/tumblr_n31c2rXw7u1tnimmlo1_540.png'
+    }else{
+        mensagem.innerHTML=`Arroz cru ou cozido demais!!!`
+        imagem.src='https://gastromony.com/wp-content/uploads/2015/11/tumblr_noaw7dPyR11t2rr2bo1_1280.png'
+    }
+
+}
+</script>

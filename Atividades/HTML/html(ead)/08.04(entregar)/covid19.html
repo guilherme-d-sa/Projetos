@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>COVID-19</h1>
+    <br>
+    Informe
+    <br>
+    <input id="rendaus" placeholder="A renda do usuario">
+    <br>
+    <input id="rendafam" placeholder="A renda da familia">
+    <br>
+    <button onclick="verificar()">Verificar ajuda</button>
+</body>
+</html>
+<script>
+function verificar(){
+    var usuario=Number(rendaus.value);
+    var familia= Number(rendafam.value);
+    if(usuario<=1050 &&familia<=2100){
+        alert('Você terá direito')
+
+    }else {
+        alert('Você NÃO terá direito')
+    }
+}
+
+</script>

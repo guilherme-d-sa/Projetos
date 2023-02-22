@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Governo</h1>
+    <br>
+    Informe sua renda individual:
+    <input id="individual">
+    <br>
+    Informe sua renda familiar
+    <input id="familiar">
+    <br>
+    <button onclick="terei()">Terei o beneficio</button>
+</body>
+</html>
+<script>
+function terei(){
+    var ind=Number(individual.value);
+    var fam=Number(familiar.value);
+
+    if(ind<=2000 ||fam<=3000){
+    alert('Você terá direito ao auxilio')
+    }else{
+        alert('Sem direito ao auxilio');
+    }
+}
+</script>

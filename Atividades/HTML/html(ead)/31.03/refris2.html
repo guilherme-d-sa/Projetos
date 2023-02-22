@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <center> <h1>Refrigerantes</h1><br><br>
+Quantas latinhas de refrigerantes toma por dia ?<br>
+<input id="latinhas">
+<br>
+<button onclick="quantos_refris()">Quantos Refris?</button>
+<div id="div_refri"></div>
+<div id="div_refri2" ></div>
+</center>
+
+</body>
+</html>
+<script>
+function quantos_refris() {
+    var valor_refris = Number(latinhas.value)*365;
+    
+ 
+
+    if (valor_refris >=500){
+        div_refri.innerHTML= `<span style="color: white; background-color: red">Cuidado com a diabetes</span>`;
+    }
+    
+div_refri2.innerHTML= `Você consome ${valor_refris} por ano`
+}
+
+</script>

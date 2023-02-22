@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Estações do Ano</h1>
+    <select  id="meses" onchange="estação()">
+        <option value="jan">Janeiro</option>
+        <option value="fev">Fevereiro</option>
+        <option value="mar">Março</option>
+        <option value="abril">Abril</option>
+        <option value="mai">Maio</option>
+        <option value="jun">Junho</option>
+        <option value="jul">Julho</option>
+        <option value="ago">Agosto</option>
+        <option value="set">Setembro</option>
+        <option value="out">Outubro</option>
+        <option value="nov">Novembro</option>
+        <option value="dez">Dezembro</option>
+    </select> <br>
+    <img id="imagem" src="" alt="" style="width: 400px; height: 400px">
+</body>
+</html>
+<script>
+function estação(){
+var mes= (meses.value);
+if(mes=='mar'){
+imagem.src='https://img5.goodfon.com/wallpaper/nbig/0/24/vesna-sad-anime.jpg'
+}else if(mes=='abril'){
+    imagem.src='https://img5.goodfon.com/wallpaper/nbig/0/24/vesna-sad-anime.jpg'
+}else if(mes=='mai'){
+imagem.src='https://img5.goodfon.com/wallpaper/nbig/0/24/vesna-sad-anime.jpg'
+} else if(mes=='jun'){
+imagem.src='https://wallpaperaccess.com/full/356359.jpg'
+}else if (mes=='jul'){
+    imagem.src='https://wallpaperaccess.com/full/356359.jpg'
+}else if(mes=='ago'){
+    imagem.src='https://wallpaperaccess.com/full/356359.jpg'
+}else if (mes=='set'){
+    imagem.src='https://lh3.googleusercontent.com/proxy/eTKdBfXUt6gy8PQCxenLsUj8cTpVsPNwZB6ArP31ySaUH4oHmWp3dEPnNM6oK-7p9uJOdDWh8K75em3i4hj1rmWA9raipf41-iC4VnrsL6E'
+}else if(mes=='out'){
+    imagem.src='https://lh3.googleusercontent.com/proxy/eTKdBfXUt6gy8PQCxenLsUj8cTpVsPNwZB6ArP31ySaUH4oHmWp3dEPnNM6oK-7p9uJOdDWh8K75em3i4hj1rmWA9raipf41-iC4VnrsL6E'
+}else if (mes=='nov'){
+    imagem.src='https://lh3.googleusercontent.com/proxy/eTKdBfXUt6gy8PQCxenLsUj8cTpVsPNwZB6ArP31ySaUH4oHmWp3dEPnNM6oK-7p9uJOdDWh8K75em3i4hj1rmWA9raipf41-iC4VnrsL6E'
+}else{
+    imagem.src='https://pbs.twimg.com/media/Cl0rLpgWIAAwCe5.jpg'
+}
+}
+
+
+
+</script>

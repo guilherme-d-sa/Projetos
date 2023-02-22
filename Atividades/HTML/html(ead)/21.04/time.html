@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input  id="time">
+    <br>
+    <input id="time2">
+    <br>
+    <button onclick="realidade()">Repetir realidade</button>
+    <br>
+    <div id="mensagem"></div>
+</body>
+</html>
+<script>
+function realidade(){
+    var contador=0;
+
+    mensagem.innerHTML=''
+    while (contador <10){
+        mensagem.innerHTML+=`<b>${time.value}</b> é melhor que <b>${time2.value}</b> <br>`
+        contador++;
+    }
+}
+</script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Netflix</h1>
+<br>
+Quando costuma acessar a Netflix? <br>  <input  id="horario">
+<br>
+<button onclick="analizar()">Analizar temperatura</button>
+
+<div id="resultado"></div>
+
+</body>
+</html>
+<script>
+function analizar(){
+    var horas=Number(horario.value);
+
+    resultado.innerHTML=`O horário  das ${horas} é adequado para assistir sua série favorita!`;
+
+     if(var_temperatura <=19){
+        resultado.innerHTML= `Não é recomendável que você assista sua série favorita no horário das ${horas}!`;
+
+     }
+
+     if(var_temperatura >=21){
+        resultado.innerHTML= `Não é recomendável que você assista sua série favorita no horário das ${horas}!`;
+     }
+} 
+
+</script>

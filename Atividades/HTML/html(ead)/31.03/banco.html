@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Itado</h1>
+    <br>
+    Saldo da conta <input id="saldo">
+    <br>
+    Valor do débito <input id="debito">
+    <br>
+    <button onclick="calcular()">Analisar conta</button>
+    <div id="mensagem"></div>
+    
+   
+</body>
+</html>
+<script>
+function calcular(){
+    var novo_saldo=Number(saldo.value)-(debito.value);
+
+    mensagem.innerHTML=`o saldo atual da conta corrente é R$${novo_saldo}`
+
+    if(novo_saldo <=0){
+  mensagem.innerHTML=` <b style="color: red">o saldo atual da conta corrente é R$${novo_saldo}</b>`
+}
+ 
+}
+</script>

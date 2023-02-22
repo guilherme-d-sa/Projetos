@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Pai insano</h1>
+    <br>
+    Informe o tempo trabalhado para o pai:
+    <input id="tempo" placeholder="Anos">
+    <br>
+    Quanto em kg a plantação rendeu?:
+    <input id="kg">
+    <br>
+    Quantos dias faltou no trabalho?:
+    <input id="faltas">
+    <br>
+    <button onclick="deu()">Deu match?</button>
+    <br>
+    <div id="mensagem"></div>
+     <br>
+    <img  id="imagem" src="" alt="" style="width: 300px; height: 300px">
+</body>
+</html>
+<script>
+function deu(){
+    var temp=Number(tempo.value);
+    var quilos=Number(kg.value);
+    var faltou=Number(faltas.value);
+    if(temp>=5&&quilos>=300&&faltou<=5){
+        mensagem.innerHTML='Minha filha será sua!';
+        imagem.src='https://i.kinja-img.com/gawker-media/image/upload/s--AQIN7MYh--/c_scale,f_auto,fl_progressive,q_80,w_800/fnal24ogmbiwrswhqtgj.jpg';
+    }else{
+        mensagem.innerHTML='Deu ruim! Trabalhe mais 2 anos';
+        imagem.src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQx2P4P3aZ4CQORxZuH1fUO1aqBIk3qOFodwpBVNVqNpm6jhXhB&usqp=CAU';
+
+
+    }
+
+}
+</script>

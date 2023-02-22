@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Paulopolis</h1>
+    Quantidade de kWh consumida no mês <br>
+    <input id="quantidade">
+    <br>
+    <button onclick="calcular()">Calcular conta de luz</button>
+    
+</body>
+</html>
+<script>
+function calcular(){
+var kwh =Number(quantidade.value);
+var conta=Number(kwh)*0.85;
+var desconto=Number(conta)*0.1;
+var conta_desconto=Number(conta)-(desconto);
+
+
+
+
+if(kwh <=100){
+    alert(`O valor da sua conta com desconto é ${conta_desconto.toFixed(2)}`)
+}
+
+alert(`O valor original  da sua conta é R$${conta.toFixed(2)}`)
+}
+
+</script>

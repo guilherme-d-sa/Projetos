@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Temperatura</h1>
+    <br>
+    <br>
+    <button onclick="sorte()">Sortear Temperatura</button>
+    <br>
+    <div id="mensagem"></div>
+    <br>
+    <div id="mensagem2"></div>
+</body>
+</html>
+<script>
+function sorte(){
+    var temp=parseInt(Math.random()*102)-51;
+    if (temp<-50){
+        temp=-50;
+    }else if(temp>51){
+        temp=51;
+    }
+    mensagem.innerHTML=`Temperatura sorteada é ${temp}`;
+
+    if(temp<0){
+        mensagem2.innerHTML=`Dá pra conservar qualquer alimento`;
+    }else if(temp<=10){
+        mensagem2.innerHTML=`Conserva  a maioria dos alimentos`;
+    }else{
+        mensagem2.innerHTML=`Estraga a maioria dos alimentos`
+    }
+
+}
+</script>

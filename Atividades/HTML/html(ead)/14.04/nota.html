@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Notas</h1>
+    <br> <br>
+
+    <button onclick="gerar1()">Gerar Nota do Aluno</button>
+    <br>
+    <div id="mensagem"></div>
+    <br>
+    <br>
+    <button onclick="gerar2()">Gerar Frequencia</button>
+    <br>
+    <div id="mensagem2"></div>
+</body>
+</html>
+<script>
+    function gerar1(){
+       
+         var nota=Math.random()*12-1;
+         if(nota<0){
+             nota=0;
+         }
+         else if(nota>10){
+             nota=10;
+         }
+         mensagem.innerHTML=nota.toFixed(2);
+    }
+
+function gerar2(){
+     var freq=Math.random()*102-1;
+     if(freq<0){
+         freq=0;
+     }else if(freq>100){
+         freq=100;
+     }
+     mensagem2.innerHTML=freq.toFixed(2);
+
+}
+
+</script>

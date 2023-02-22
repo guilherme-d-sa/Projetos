@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cabalistico </h1>
+    <br>
+    Você clicou <b id="vezes">0</b> Vezes
+    <br>
+    <button onclick="clica()">Clique cabalistico!</button>
+    <br>
+    <div id="mensagem" ></div>
+</body>
+</html>
+<script>
+    var cliques =0;
+function clica(){
+    
+    cliques++;
+    
+    vezes.innerHTML = cliques;
+    if(cliques==3||cliques==4||cliques==7||cliques==10){
+        mensagem.innerHTML=`Juliana gosta desse numero`;
+    }else{
+        mensagem.innerHTML=''
+    }
+
+    
+
+    
+}
+</script>

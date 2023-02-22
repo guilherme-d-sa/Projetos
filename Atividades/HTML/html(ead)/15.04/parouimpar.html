@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sortear par e impar</h1>
+    <br>
+    Números pares: <b id="b_par">0</b>
+    <br>
+    Números impares: <b id="b_impar">0</b>
+
+    <br>
+    <button onclick="sortear()">Sortear Número</button>
+    <br>
+    <div id="mensagem"></div>
+</body>
+</html>
+<script>
+    var par=0;
+    var impar=0;
+   
+function sortear(){
+
+
+    var numero=parseInt(Math.random()*101)+1;
+    mensagem.innerHTML= numero;
+    
+    if(numero %2==0){
+        b_par.innerHTML=++par;
+    }
+    else{
+        b_impar.innerHTML=++impar;
+    }
+
+}
+</script>
